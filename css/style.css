@@ -10,9 +10,13 @@ body {
 }
 
 .question {
-	margin-top: 90px;
+	margin-top: 20px;
 	font-size: 40px;
 	text-shadow: 0 1px #bbb;
+}
+
+.option {
+	margin: 10px;
 }
 
 .information {
