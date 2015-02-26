@@ -41,7 +41,7 @@ function router()
 	$requestURI    = explode('/', $_SERVER['REDIRECT_URL']); //['REQUEST_URI']);
 	$requestURI[0] = (count($requestURI)-1);
 
-	if ($requestURI[1] == 'flashback')
+	if ($requestURI[2] == 'flashback')
 	{
 		require_once('./php/flashback.php');
 	}

@@ -3,7 +3,7 @@ AddCharset utf-8 *
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /
+    RewriteBase /2007
 
     RewriteCond %{HTTP_HOST} (.*)
     RewriteCond %{REQUEST_URI} /$ [NC]
