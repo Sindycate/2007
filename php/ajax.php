@@ -11,7 +11,7 @@ function ajax()
 	try
 	{
 		$db_get_question = database::$DBH->prepare(
-			"SELECT `type`, `text`, `answer1`, `answer2`, `answer`
+			"SELECT `type`, `text`, `answer1`, `answer2`, `answer3`, `answer4`, `answer`
 			 FROM `questions`
 			 ORDER BY RAND()
 			 LIMIT 1");
