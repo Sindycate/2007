@@ -33,6 +33,14 @@ hr {
 	display: inline-block;
 }
 
+.photo-question {
+	margin: 10px 0 10px 50px;
+}
+
+.audio-question {
+	margin-left: 90px;
+}
+
 .btn-choice {
 	margin: 7px 0 0 0;
 }
