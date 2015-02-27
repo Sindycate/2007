@@ -8,6 +8,10 @@ hr {
 	opacity: 0;
 }
 
+.field {
+	background-color: #fff;
+}
+
 .logo {
 	margin-top: 90px;
 	font-size: 90px;
@@ -62,6 +66,45 @@ hr {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16);
 }
 
+.btn-retrieve:hover {
+	margin-top: 20px;
+	font-size: 20px;
+	border-radius: 160px;
+	padding: 65px 40px 65px 40px;
+	color: #fff;
+	/*text-shadow: 0 1px #999;*/
+	background-color: #FF4081;
+	box-shadow: 0px 0px 30px #fff,0 0px 30px #fff;
+}
+
+.btn-choice {
+	background-color: #FF4081;
+	color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16);
+}
+
+.count-questions {
+	margin-top: 60px;
+	font-size: 20px;
+	color: #333;
+	/*text-shadow: 0px 1px #333;*/
+}
+
 .social {
 	margin-top: 60px;
+}
+
+.years {
+	display: inline-block;
+	margin: 0 15px 10px 0;
+	font-size: 20px;
+}
+
+.active-year {
+	color: #FF4081;
+	background-color: #333;
+	padding: 2px 6px 2px 6px;
+	border-radius: 2px;
+	/*box-shadow: 0 1px 3px rgba(0,0,0,0.23),0 3px 10px rgba(0,0,0,0.16);*/
 }
