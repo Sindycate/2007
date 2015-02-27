@@ -45,6 +45,10 @@ function router()
 	{
 		require_once('./php/flashback.php');
 	}
+	else if ($requestURI[2] == 'ajax')
+	{
+		require_once('./php/ajax.php');
+	}
 	// if ($requestURI[2] == 'registration')
 	// {
 	// 	require_once('./php/email.php');
