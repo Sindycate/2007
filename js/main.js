@@ -1,10 +1,14 @@
-var $btns = jQuery(".btn-choice"),
-    $answer1 = jQuery("#answer1"),
-    $answer2 = jQuery("#answer2"),
-    $answer3 = jQuery("#answer3"),
-    $answer4 = jQuery("#answer4"),
-    $questionNum = jQuery("#question-num"),
-    $questionText = jQuery("#question-text");
+"use strict";
+
+var $btns         = jQuery(".btn-choice"),
+    $answer1      = jQuery("#answer1"),
+    $answer2      = jQuery("#answer2"),
+    $answer3      = jQuery("#answer3"),
+    $answer4      = jQuery("#answer4"),
+    $questionNum  = jQuery("#question-num"),
+    $questionText = jQuery("#question-text"),
+    $getBack      = jQuery("#get-back"),
+    $mainFrame    = jQuery("#main-frame");
 
 function createOnclick(value) {
 	return function() {
@@ -18,7 +22,6 @@ function createOnclick(value) {
 			} else {
 				$answer3.parent().show();
 				$answer4.parent().show();
-
 				$answer3.html(data.answer3);
 				$answer4.html(data.answer4);
 			}
@@ -28,6 +31,23 @@ function createOnclick(value) {
 	};
 }
 
-for (var ii = 1; ii <= $btns.length; ii++) {
-	$btns[ii-1].onclick = createOnclick(ii);
+$getBack.click(function() {
+	jQuery.get("./flashback?ajax=1", function(data) {
+		// console.log(data);
+		$mainFrame.html(data);
+		setTimeout(function() { init(); }, 500);
+	});
+});
+
+function init() {
+	$btns         = jQuery(".btn-choice");
+	$answer1      = jQuery("#answer1");
+	$answer2      = jQuery("#answer2");
+	$answer3      = jQuery("#answer3");
+	$answer4      = jQuery("#answer4");
+	$questionNum  = jQuery("#question-num");
+	$questionText = jQuery("#question-text");
+	for (var ii = 1; ii <= $btns.length; ii++) {
+		$btns[ii-1].onclick = createOnclick(ii);
+	}
 }
