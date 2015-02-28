@@ -8,12 +8,20 @@ var $btns = jQuery(".btn-choice"),
 
 function createOnclick(value) {
 	return function() {
-		jQuery.getJSON("./ajax?answer=value", function(data) {
+		jQuery.getJSON("./ajax?answer=" + value, function(data) {
 			$questionText.html(data.text);
 			$answer1.html(data.answer1);
 			$answer2.html(data.answer2);
-			$answer3.html(data.answer3);
-			$answer4.html(data.answer4);
+			if (!data.answer3) {
+				$answer3.parent().hide();
+				$answer4.parent().hide();
+			} else {
+				$answer3.parent().show();
+				$answer4.parent().show();
+
+				$answer3.html(data.answer3);
+				$answer4.html(data.answer4);
+			}
 			$questionNum.text(parseInt($questionNum.text())+1);
 			console.log(data);
 		});
